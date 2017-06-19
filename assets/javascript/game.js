@@ -29,17 +29,53 @@ $(document).ready(function(){
 		greenNum = randCrystalNum();
 		purpleNum = randCrystalNum();
 		yellowNum = randCrystalNum();
+	
 
-		
+		$("#computernumber").html("Wizard: " + compNum);
+		$("#usernumber").html("You: " + userNum);
+		$("#wins").html("Wins: " + wins);
+		$("#losses").html("Losses: " + losses);
 
+		$(".btn").on("click", function(){
+			if (this.id === "bluecrystal") {
+				userNum = userNum + blueNum;
+				$("#usernumber").html("You: " + userNum);
+			} else if (this.id === "greencrystal") {
+				userNum = userNum + greenNum;
+				$("#usernumber").html("You: " + userNum);
+			} else if (this.id === "purplecrystal") {
+				userNum = userNum + purpleNum;
+				$("#usernumber").html("You: " + userNum);
+			} else if (this.id === "yellowcrystal") {
+				userNum = userNum + yellowNum;
+				$("#usernumber").html("You: " + userNum);
+			}
+
+			if (userNum === compNum) {
+				wins++;
+				userNum = 0;
+				compNum = 0;
+				blueNum = 0;
+				greenNum = 0;
+				purpleNum = 0;
+				yellowNum = 0;
+				gameStart();
+			}
+
+			if (userNum > compNum) {
+				losses++;
+				userNum = 0;
+				compNum = 0;
+				blueNum = 0;
+				greenNum = 0;
+				purpleNum = 0;
+				yellowNum = 0;
+				gameStart();
+			}
+
+		});
 
 	}
+
+	gameStart();
 });
-
-
-
-//pick random comp number
-//set random crystal amounts
-//user number goes up by the amount of the each crystal when clicked
-//if the user number equals the comp number, a win
-//if the user number exceeds the comp number, a loss
