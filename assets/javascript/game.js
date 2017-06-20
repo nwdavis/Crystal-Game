@@ -22,6 +22,7 @@ $(document).ready(function(){
 		return Math.floor(Math.random() * 12 + 1);
 	}
 
+
 	function gameStart() {
 
 		compNum = randCompNum();
@@ -40,15 +41,19 @@ $(document).ready(function(){
 			if (this.id === "bluecrystal") {
 				userNum = userNum + blueNum;
 				$("#usernumber").html("You: " + userNum);
+
 			} else if (this.id === "greencrystal") {
 				userNum = userNum + greenNum;
 				$("#usernumber").html("You: " + userNum);
+
 			} else if (this.id === "purplecrystal") {
 				userNum = userNum + purpleNum;
 				$("#usernumber").html("You: " + userNum);
+
 			} else if (this.id === "yellowcrystal") {
-				userNum = userNum + yellowNum;
+				userNum = userNum + yellowNum; 
 				$("#usernumber").html("You: " + userNum);
+
 			}
 
 			if (userNum === compNum) {
@@ -79,3 +84,6 @@ $(document).ready(function(){
 
 	gameStart();
 });
+
+//Why does it multiply the crystal number by 2 the second time playing?
+//Why can't I change the damn font-color on the page to white?
