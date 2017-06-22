@@ -27,9 +27,13 @@ $(document).ready(function(){
 
 		compNum = randCompNum();
 		blueNum = randCrystalNum();
+		console.log(blueNum)
 		greenNum = randCrystalNum();
+		console.log(greenNum)
 		purpleNum = randCrystalNum();
+		console.log(purpleNum)
 		yellowNum = randCrystalNum();
+		console.log(yellowNum)
 	
 
 		$("#computernumber").html("Wizard: " + compNum);
@@ -37,21 +41,22 @@ $(document).ready(function(){
 		$("#wins").html("Wins: " + wins);
 		$("#losses").html("Losses: " + losses);
 
-		$(".btn").on("click", function(){
+		$(".crystal").on("click", function(){
+			alert("You Clicked!")
 			if (this.id === "bluecrystal") {
-				userNum = userNum + blueNum;
+				userNum += blueNum;
 				$("#usernumber").html("You: " + userNum);
 
 			} else if (this.id === "greencrystal") {
-				userNum = userNum + greenNum;
+				userNum += greenNum;
 				$("#usernumber").html("You: " + userNum);
 
 			} else if (this.id === "purplecrystal") {
-				userNum = userNum + purpleNum;
+				userNum += purpleNum;
 				$("#usernumber").html("You: " + userNum);
 
 			} else if (this.id === "yellowcrystal") {
-				userNum = userNum + yellowNum; 
+				userNum += yellowNum; 
 				$("#usernumber").html("You: " + userNum);
 
 			}
@@ -86,4 +91,3 @@ $(document).ready(function(){
 });
 
 //Why does it multiply the crystal number by 2 the second time playing?
-//Why can't I change the damn font-color on the page to white?

@@ -2,19 +2,17 @@ body {
 	text-align: center;
 	font-size: 45px;
 	color: white;
+	font-family: 'Jim Nightshade', cursive;
 	background-image: url(../images/black.png);
 }
 
 h1 {
 	font-size: 55px;
-	font-family: 'Jim Nightshade', cursive;
 }
 
 .jumbotron {
 	background: transparent;
 	box-shadow: none;
-	font-family: 'Jim Nightshade', cursive;
-		
 }
 
 .scores {
@@ -25,31 +23,5 @@ h1 {
 	border: none;
 	box-shadow: none;
 	background: transparent;
-	font-family: 'Jim Nightshade', cursive;
 }
 
-.btn {
-	border: none;
-	background-color: transparent;
-	height: 256px;
-	width: 200px;
-}
-
-.btn, .btn:hover, .btn:active, .btn:visited, .btn:focus {
-	background-color: transparent;
-}
-
-#bluecrystal {
-	background-image: url(../images/bluecrystal.png);
-	background-color: none;
-
-}
-#greencrystal {
-	background-image: url(../images/greencrystal.png);
-}
-#purplecrystal{
-	background-image: url(../images/purplecrystal.png);
-}
-#yellowcrystal{
-	background-image: url(../images/yellowcrystal.png);
-}
