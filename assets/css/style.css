@@ -25,3 +25,15 @@ h1 {
 	background: transparent;
 }
 
+img {
+    margin: 15px;
+    opacity: 0.8;
+    -webkit-transition: margin 0.2s ease-out;
+    -moz-transition: margin 0.2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+}
+ 
+img:hover {
+    margin-top: 2px;
+    opacity: 1.0;
+}

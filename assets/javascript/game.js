@@ -41,7 +41,7 @@ $(document).ready(function(){
 		$("#wins").html("Wins: " + wins);
 		$("#losses").html("Losses: " + losses);
 
-		$(".crystal").on("click", function(){
+		$(".test").on("click", function(){
 			alert("You Clicked!")
 			if (this.id === "bluecrystal") {
 				userNum += blueNum;
@@ -89,5 +89,7 @@ $(document).ready(function(){
 
 	gameStart();
 });
+
+
 
 //Why does it multiply the crystal number by 2 the second time playing?
