@@ -10,9 +10,6 @@ $(document).ready(function(){
 	var wins = 0;
 	var losses = 0;
 
-	//computer number between 19-120
-	//crystal number between 1-12
-
 	function randCompNum() {
 		return Math.floor(Math.random() * 120 + 19);
 	}
@@ -26,14 +23,11 @@ $(document).ready(function(){
 	function gameStart() {
 
 		compNum = randCompNum();
-		blueNum = randCrystalNum();
-		console.log(blueNum)
-		greenNum = randCrystalNum();
-		console.log(greenNum)
-		purpleNum = randCrystalNum();
-		console.log(purpleNum)
-		yellowNum = randCrystalNum();
-		console.log(yellowNum)
+		userNum = 0;
+		blueNum = randCrystalNum();		
+		greenNum = randCrystalNum();		
+		purpleNum = randCrystalNum();	
+		yellowNum = randCrystalNum();		
 	
 
 		$("#computernumber").html("Wizard: " + compNum);
@@ -41,10 +35,12 @@ $(document).ready(function(){
 		$("#wins").html("Wins: " + wins);
 		$("#losses").html("Losses: " + losses);
 
-		$(".test").on("click", function(){
-			alert("You Clicked!")
+	}
+
+
+		$(".crystal").on("click", function(){
 			if (this.id === "bluecrystal") {
-				userNum += blueNum;
+				userNum +=  blueNum;
 				$("#usernumber").html("You: " + userNum);
 
 			} else if (this.id === "greencrystal") {
@@ -63,33 +59,15 @@ $(document).ready(function(){
 
 			if (userNum === compNum) {
 				wins++;
-				userNum = 0;
-				compNum = 0;
-				blueNum = 0;
-				greenNum = 0;
-				purpleNum = 0;
-				yellowNum = 0;
 				gameStart();
 			}
 
-			if (userNum > compNum) {
+			else if (userNum > compNum) {
 				losses++;
-				userNum = 0;
-				compNum = 0;
-				blueNum = 0;
-				greenNum = 0;
-				purpleNum = 0;
-				yellowNum = 0;
 				gameStart();
 			}
 
 		});
 
-	}
-
 	gameStart();
 });
-
-
-
-//Why does it multiply the crystal number by 2 the second time playing?
